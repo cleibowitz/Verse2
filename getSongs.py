@@ -99,7 +99,7 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                     client = gspread.authorize(creds)
 
                     # Open spreadsheet
-                    spreadsheet = client.open('test')
+                    spreadsheet = client.open('userSongs')
                     worksheet = spreadsheet.get_worksheet(0)
                     existing_data = worksheet.get_all_values()
                     start_row = len(existing_data) + 1
